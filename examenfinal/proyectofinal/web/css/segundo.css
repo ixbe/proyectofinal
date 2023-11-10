@@ -1,0 +1,100 @@
+/* segundo.css */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../imagen/maya.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: #ffffff; 
+}
+
+#lista {
+    margin: 50px; 
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ffffff; 
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.4); /* Ajusta el valor alfa según sea necesario para el color de fondo de filas pares */
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.4); /* Ajusta el valor alfa según sea necesario para el color de fondo de filas impares */
+}
+
+a {
+    color: #ffffff; /* Ajusta el color de los enlaces según sea necesario */
+}
+#boton {
+    display: block;
+    width: 200px;
+    height: 30px;
+    border-radius: 6px;
+    background: #964B00;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px; /* Ajusta el line-height para centrar el texto verticalmente */
+    margin: 0 auto; /* Alinea el botón al centro horizontalmente */
+    padding: 5px; /* Ajusta el relleno según sea necesario para separar el texto de los bordes */
+}
+
+/* segundo.css */
+
+/* Otros estilos... */
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff; /* Color del texto del label */
+}
+
+#busqueda {
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    height: 30px; /* Ajusta la altura según sea necesario */
+    border: 1px solid #ccc; /* Ajusta el estilo del borde según sea necesario */
+    border-radius: 6px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    width: 100px; /* Ajusta el ancho según sea necesario */
+    height: 40px; /* Ajusta la altura según sea necesario */
+    border-radius: 6px;
+    background: #964B00;
+    color: #ffffff;
+    font-size: 15px;
+    border: none;
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+
