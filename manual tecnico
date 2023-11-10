@@ -1,0 +1,169 @@
+## Manual Técnico para la Aplicación de Gestión de Artículos
+
+### Índice
+
+1. **Introducción**
+   - 1.1 Propósito del Documento
+   - 1.2 Alcance del Sistema
+   - 1.3 Tecnologías Utilizadas
+
+2. **Configuración del Proyecto**
+   - 2.1 Requisitos del Sistema
+   - 2.2 Configuración del Entorno de Desarrollo
+   - 2.3 Configuración de la Base de Datos
+
+3. **Estructura del Proyecto**
+   - 3.1 Estructura de Carpetas
+   - 3.2 Descripción de Archivos Importantes
+
+4. **Base de Datos**
+   - 4.1 Modelo de Datos
+   - 4.2 Tablas y Relaciones
+   - 4.3 Procedimientos Almacenados
+
+5. **Capa de Datos (DAO)**
+   - 5.1 ArticulosDAO
+   - 5.2 UsuarioDAO
+   - 5.3 Métodos y Funcionalidades
+
+6. **Capa de Presentación (JSP)**
+   - 6.1 Index.jsp (Listado de Artículos)
+   - 6.2 Editar.jsp (Edición de Artículos)
+   - 6.3 Eliminar.jsp (Eliminación de Artículos)
+   - 6.4 Login.jsp (Inicio de Sesión)
+   - 6.5 Nuevo.jsp (Creación de Artículos)
+
+7. **Proceso de Inicio de Sesión**
+   - 7.1 ValidarLogin.jsp
+   - 7.2 UsuarioDAO
+
+8. **Consideraciones de Seguridad**
+   - 8.1 Prevención de Inyección SQL
+   - 8.2 Autenticación y Autorización
+
+### 1. Introducción
+
+#### 1.1 Propósito del Documento
+
+El propósito de este manual técnico es proporcionar una guía detallada sobre la estructura, configuración y funcionalidades del sistema de gestión de artículos.
+
+#### 1.2 Alcance del Sistema
+
+El sistema permite realizar operaciones básicas de gestión de artículos, incluyendo la visualización, edición, eliminación y creación de nuevos registros. También cuenta con un sistema de inicio de sesión para acceder a las funcionalidades.
+
+#### 1.3 Tecnologías Utilizadas
+
+El sistema está desarrollado utilizando tecnologías como JavaServer Pages (JSP), Servlets, y MySQL como sistema de gestión de base de datos.
+
+### 2. Configuración del Proyecto
+
+#### 2.1 Requisitos del Sistema
+
+- Servidor de Aplicaciones compatible con JSP (por ejemplo, Apache Tomcat).
+- Servidor de Base de Datos MySQL.
+
+#### 2.2 Configuración del Entorno de Desarrollo
+
+1. Clone el repositorio del proyecto desde [URL del Repositorio].
+2. Importe el proyecto en su IDE de preferencia.
+3. Configure el servidor de aplicaciones para ejecutar el proyecto.
+
+#### 2.3 Configuración de la Base de Datos
+
+1. Cree una base de datos en MySQL llamada `bdproductos`.
+2. Ejecute el script SQL proporcionado en `script_bdproductos.sql` para crear las tablas necesarias.
+
+### 3. Estructura del Proyecto
+
+#### 3.1 Estructura de Carpetas
+
+- `WebContent`: Contiene los archivos JSP y recursos web.
+- `src`: Contiene el código fuente Java.
+- `lib`: Bibliotecas externas.
+
+#### 3.2 Descripción de Archivos Importantes
+
+- `ArticulosDAO.java`: Implementa las operaciones de acceso a datos para los artículos.
+- `UsuarioDAO.java`: Implementa la validación del inicio de sesión.
+- Archivos JSP: Representan las páginas web del sistema.
+
+### 4. Base de Datos
+
+#### 4.1 Modelo de Datos
+
+El modelo de datos incluye las tablas `Articulos`, `Categoria`, `Proveedor`, y `Usuario`.
+
+#### 4.2 Tablas y Relaciones
+
+- `Articulos`: Almacena la información de los artículos.
+- `Categoria` y `Proveedor`: Tablas de referencia para categorías y proveedores.
+- `Usuario`: Almacena información de los usuarios para el inicio de sesión.
+
+#### 4.3 Procedimientos Almacenados
+
+No se utilizan procedimientos almacenados en este sistema.
+
+### 5. Capa de Datos (DAO)
+
+#### 5.1 ArticulosDAO
+
+Este archivo contiene las operaciones CRUD para los artículos, así como métodos adicionales para la gestión de categorías y proveedores.
+
+#### 5.2 UsuarioDAO
+
+Implementa la validación del usuario y contraseña para el inicio de sesión.
+
+#### 5.3 Métodos y Funcionalidades
+
+- `listarArticulo()`: Obtiene la lista de todos los artículos.
+- `buscarArticulo(String codigo)`: Busca un artículo por su código.
+- Otros métodos proporcionan funcionalidades adicionales.
+
+### 6. Capa de Presentación (JSP)
+
+#### 6.1 Index.jsp (Listado de Artículos)
+
+Esta página muestra un listado de todos los artículos, permitiendo buscar, editar y eliminar.
+
+#### 6.2 Editar.jsp (Edición de Artículos)
+
+Permite editar la información de un artículo existente.
+
+#### 6.3 Eliminar.jsp (Eliminación de Artículos)
+
+Permite eliminar un artículo.
+
+#### 6.4 Login.jsp (Inicio de Sesión)
+
+Página de inicio de sesión para acceder al sistema.
+
+#### 
+
+6.5 Nuevo.jsp (Creación de Artículos)
+
+Permite la creación de un nuevo artículo.
+
+### 7. Proceso de Inicio de Sesión
+
+#### 7.1 ValidarLogin.jsp
+
+Valida las credenciales del usuario y redirige al usuario a la página principal si las credenciales son válidas.
+
+#### 7.2 UsuarioDAO
+
+Contiene métodos relacionados con la validación del usuario.
+
+### 8. Consideraciones de Seguridad
+
+#### 8.1 Prevención de Inyección SQL
+
+Se han implementado consultas preparadas para prevenir la inyección SQL en las operaciones de base de datos.
+
+#### 8.2 Autenticación y Autorización
+
+El sistema utiliza un sistema de inicio de sesión para autenticar a los usuarios. Además, se implementa un control de acceso para limitar el acceso a ciertas funcionalidades según el rol del usuario.
+
+---
+
+Este manual técnico proporciona una visión general del sistema de gestión de artículos, desde la configuración del proyecto hasta la implementación de funcionalidades clave. Se recomienda seguir las instrucciones detalladas para garantizar una correcta configuración y funcionamiento del sistema.
+
