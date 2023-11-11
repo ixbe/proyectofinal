@@ -95,3 +95,4 @@ Se recomienda seguir las mejores prácticas de seguridad, como el uso de consult
  8.2 Autenticación y Autorización
 
 Dado que no se implementa un sistema de inicio de sesión, no se aplican consideraciones de autenticación y autorización en este contexto.
+
